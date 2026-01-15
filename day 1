@@ -1,0 +1,70 @@
+print("hello","python",sep="@",end="#")
+print("priyanka is here")
+
+#variables
+a=56
+gjhjhjk=2
+a1=6
+#1a=8 #shows error its not an variable
+a_2=6
+print(a)
+print(gjhjhjk)
+print(a1)
+#print(1a)
+print(a_2)
+
+
+#data types
+a=45 
+b=45.0 
+c="45" "hello"
+d=True
+e=None
+print(type(e))
+print(d)
+print(type(d))
+print(c)
+print(type(c))
+print(b)
+print(type(b))
+print(type(a))
+print(a)
+
+
+#string
+a='I\'m priyanka'
+b="I'm priyanka"
+c="""hi priyanka is here"""
+print(a)
+print(type(a))
+print(b)
+print(type(b))
+print(c)
+print(type(c))
+
+
+
+#indexing
+a="hello python"
+print(len(a))
+print(a[1:5])
+print(a[1:5:2])
+print(a[5:])
+print(a[:5])
+print(a[::-1])
+print(a[::])
+
+
+#mathods
+a="heLlo PytHon"
+print(a.startswith("h"))
+print(a.endswith("P"))
+print(a.replace("o","#"))
+print(a.split("o"))
+print(a.upper())
+print(a.lower())
+print(a.capitalize())
+print(a.title())
+print(a.index("o"))
+print(a.find("L"))
+print(a.strip())
