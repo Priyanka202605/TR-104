@@ -1,0 +1,80 @@
+#functions
+#built-in functions
+# a="hello"
+# print(len(a))
+# print(type(a))
+
+# #user defind functions
+# def avg():
+#     a=int(input("Enter any number "))
+#     b=int(input("Enter any number "))
+#     c=int(input("Enter any number "))
+#     print((a+b+c)/3)
+# avg()
+    
+    
+# def percentage():
+#     a=int(input("Enter any number "))
+#     b=int(input("Enter any number "))
+    
+#     if b==0:
+#        print("divisibal value can not be zero")
+#     else:
+#        print((a/b)*100)
+# percentage()    
+
+
+# a=int(input("Enter any number "))
+# b=int(input("Enter any number "))
+    
+# def percentage(x,y=0):
+        
+#     if y==0:
+#        print("divisor value can not be zero")
+#     else:
+#        print((x/y)*100)
+# percentage(a)    
+# percentage(2,3)
+
+
+
+
+# a=int(input("Enter any number "))
+# b=int(input("Enter any number "))
+# c=int(input("Enter any number "))
+# def avg(x,y,z=0):
+#     print((x+y+z)/3)
+# avg(a,b)
+
+
+#lambda function
+# f=lambda x,y:x+y
+
+# def apply(func,a,b):
+#     return func(a,b)
+# print(apply(f,5,7))    
+
+
+
+
+# a=lambda y,z:y+z
+
+# def apply(func,a,b):
+#     return func(a,b)
+
+# print(apply(a,5,3))
+
+
+
+#factorial function
+def fact(n):
+    if n==0:
+        print("o")
+        return 1
+    else:
+        print("p")
+        return n*fact(n-1)
+    
+print(fact(5))    
+
+
