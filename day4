@@ -1,0 +1,58 @@
+# a=1
+# if a>5:
+#     print("a is greater then 5")
+# else:
+#     print("a is not greater then 5")
+
+
+#elif
+# a=5
+# if a<5:
+#     print("a is smaller then 5")
+# elif a>5:
+#     print("a is greater then 5")
+# elif a==5:
+#     print("a is equal to 5")
+# else:
+#     print("invalid")
+
+
+#nested if else
+
+# age=15
+# v_id=False
+# if age>18:
+#     print("Eligible for vote")
+#     if v_id==True:
+#         print("person can vote")
+#     else:
+#         print("person can not vote")
+# else:
+#     print("not eligible")
+
+
+#loops
+# for i in range(6):
+#     print("hello python",i)
+
+#while
+
+# i=0
+# while i<=10:
+#     print("hello python",i)
+#     i=i+1
+
+
+# for i in range(5):
+#     print(i*" *"  , i)
+
+
+# print("*"*3)
+
+# for i in range(5):
+#     if i==3:
+#         continue
+#         #break #exit
+#     print(i)
+# else:
+#     print("end")
