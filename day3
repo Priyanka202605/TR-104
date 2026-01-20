@@ -1,0 +1,174 @@
+#sets
+# a={12,34,56,78,12, 1,True, 0, False}
+# b={12,34,400,500,400}
+# print(a[0])
+#mathods
+# print(a.union(b))
+# print(a.intersection(b))
+# print(a.difference(b))
+# print(a.symmetric_difference(b))
+# print(a)
+# a.update(b)
+# a.difference_update(b)
+# a.symmetric_difference_update(b)
+# print(a)
+
+# a={12,34,56,78,12, 1,True, 0, False}
+# print(a)
+# print(len(a))
+# a.clear()
+# print(a)
+# a.add(700)
+# print(a.pop())
+# a.discard(560)
+# a.remove(560)
+# print(a)
+
+# a=[10,20]
+# b=(10,20)
+# c={10,20}
+# print(a.__sizeof__(), "list")
+# print(b.__sizeof__(), "Tuple")
+# print(c.__sizeof__(), "set")
+
+
+# Dict
+# a={
+#     "key": "Value",
+#     "Name": "Rahul",
+#     "contact":798797,
+#     23:[23,56,676]
+# #     "Name":"Python"
+# }
+# print(type(a))
+# print(len(a))
+# a["Name"]="Code"
+# a["color"]="Red"
+# print(a)
+# print(a[23])
+
+#Mathods
+# print(a.keys())
+# print(a.values())
+# print(a.items())
+# b={
+#     "name2":"python",
+#     "student": True,
+#     23:"Red"
+# }
+# a.update(b)
+# print(a)
+
+
+# a={
+#     "key": "Value",
+#     "Name": "Rahul",
+#     "contact":798797,
+#     23:[23,56,676]
+#     # "Name":"Python"
+# }
+# a.pop("Name")
+# a.popitem()
+# a.clear()
+
+# print(a.get("Name"))
+
+
+
+#Nested Dict
+
+# std={
+#     "St1":{
+#         "Name":"Rahul",
+#         "Rollno":1
+#     },
+#     "St2":{
+#         "Name":"Kamal",
+#         "Rollno":2
+#     }
+# }
+# print(std["St1"]["Rollno"])
+
+
+# print(a | b)
+
+
+
+
+
+
+
+#operators
+
+# a=10
+# b=3
+# print(a%b)
+
+
+# a=10
+# a**=2 # a= a+1
+# print(a)
+
+# a=20
+# b=5
+# c=20
+# # print(a>b)
+# # print(a<b)
+# # print(a==c)
+# # print(a>=c)
+# # print(a<=c)
+# print(a!=c)
+
+
+# and or not
+# a= True
+# b= False
+# print(a and a)
+# print(b or b)
+# print(not b)
+
+
+#bitwise
+# a= -6
+# b= 3
+# # print(a & b)
+# # print(a |b)
+# print(~ a)
+
+
+# a="hello python"
+# print("e" in a)
+# print("e" not in a)
+
+
+# a=[23,45]
+# b=[23,45]
+# c=a
+# # print(a is b)
+# # print(a is c)
+# print(a is not b)
+
+
+
+# a= (67,89,90)
+# print(a, type(a))
+# # a= float(a)
+# # a= str(a)
+# # a= bool(a)
+# # a= int(a)
+# a=list(a)
+# print(a, type(a))
+
+
+
+
+#input
+
+a= bool(int(input("Enter any number")))
+print(a)
+print(type(a))
+
+
+# b="0"
+# b= bool(b)
+# print(b)
