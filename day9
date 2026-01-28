@@ -1,0 +1,359 @@
+#class
+
+
+# class building:
+
+#     def __init__(self,rooms,doors,windows):
+
+#         self.rooms=rooms
+
+#         self.doors=doors
+
+#         self.windows=windows
+
+#         print("building constructor is called")
+
+#     def create(self):
+
+#             print(f"building have {self.rooms} rooms, {self.doors} doors and {self.windows} windows")
+
+
+# # print(building(3,4,2))
+
+# b1=building(3,4,2)
+
+# b1.create()     
+
+# # print(building)            
+
+
+
+
+#inheritance
+
+# cs building:
+
+#     def __init__(self,rooms,doors,windows):
+
+#         self.rooms=rooms
+
+#         self.doors=doors
+
+#         self.windows=windows
+
+#         print("building constructor is called")
+
+#     def create(self):
+
+#         print(f"building have {self.rooms} rooms, {self.doors} doors and {self.windows} windows")
+
+# class home(building):
+
+#     def __init__(self,rooms,doors,windows): 
+
+#         super().__init__(rooms,doors,windows)
+
+#         print("home constructor is called")
+
+#     def get(self):
+
+#         print(f"home has {self.rooms} rooms, {self.doors} doors and {self.windows} windows")
+
+
+# b1=building(3,4,2)
+
+# b2=home(2,2,3)
+
+# b1.create()
+
+# b2.get()
+
+# # print(building)             
+
+
+
+
+#multiple inheritance
+
+# class building:
+
+#     def __init__(self,rooms,doors,windows):
+
+#         self.rooms=rooms
+
+#         self.doors=doors
+
+#         self.windows=windows
+
+#         print("building constructor is called")
+
+#     def create(self):
+
+#         print(f"building have {self.rooms} rooms, {self.doors} doors and {self.windows} windows")
+
+# class home:
+
+#     def __init__(self,rooms,doors,windows):
+
+#         self.rooms=rooms
+
+#         self.doors=doors
+
+#         self.windows=windows
+
+#         print("home constructor is called")
+
+#     def get(self):
+
+#         print(f"home have {self.rooms} rooms, {self.doors} doors and {self.windows} windows")
+
+# class test(building,home):
+
+#     def __init__(self,rooms,doors,windows):
+
+#         super().__init__(rooms,doors,windows)
+
+#         print("test constructor is called")
+
+#     def show(self):
+
+#         print(f"test have {self.rooms} rooms, {self.doors} doors and {self.windows} windows")   
+
+# b1=building(2,3,5)
+
+# h1=home(3,2,4)
+
+# t1=test(2,3,4)
+
+# b1.create()
+
+# t1.show()
+
+# print(building)                                
+
+
+
+
+#multilevel inheritance
+
+# class building:
+
+#     def __init__(self,rooms,doors,windows):
+
+#         self.rooms=rooms
+
+#         self.doors=doors
+
+#         self.windows=windows
+
+#         print("building constructor is called")
+
+#     def create(self):
+
+#         print(f"building have {self.rooms} rooms, {self.doors} doors and {self.windows} windows")
+
+# class home(building):
+
+#     def __init__(self,rooms,doors,windows):
+
+#         super().__init__(rooms,doors,windows)
+
+#         print("home constructor is called")
+
+#     def get(self):
+
+#         print(f"home have {self.rooms} rooms, {self.doors} doors and {self.windows} windows")
+
+# class test(home):
+
+#     def __init__(self,rooms,doors,windows):
+
+#         super().__init__(rooms,doors,windows)
+
+#         print("test constructor is called")
+
+#     def show(self):
+
+#          print(f"test have {self.rooms} rooms, {self.doors} doors and {self.windows} windows")   
+
+# b1=building(2,3,5)
+
+# h1=home(3,2,4)
+
+# t1=test(2,3,4)
+
+# b1.create()
+
+# t1.show()
+
+# h1.get()
+
+# print(building)                                
+
+
+
+
+
+#practice question
+
+# class Car:
+
+#     def __init__(self,brand,color):
+
+#         self.brand=brand
+
+#         self.color=color
+
+#     def show_info(self):
+
+#         print(f"Car brand is {self.brand} and it's color is {self.color}")
+
+# c1=Car("bmw","black")
+
+# c1.show_info()            
+
+
+# # class student
+   
+# #     def __init__(self,name,marks
+# #         self.name=na
+# #         self.marks=int(mark
+# #     def check(self
+# #         if self.marks>=40:
+# #           print(f"{self.name} has passed with marks {self.marks}")  
+# #         else:
+# #           print(f"{self.name} has failed with marks {self.marks}
+          
+# # s1=student("rahul","23")
+# # s2=student("sham","56")
+# # s3=student("jae","40")
+# # s1.check
+# # s2.check
+# # s3.check
+              
+              
+# class BankAccount:
+#     def __init__(self,account_number,balance):
+#         self.account_number=int(account_number)
+#         self.balance=int(balance)
+#     def deposit(self,amount):
+#         amount=int(amount)
+#         if amount>0:
+#             self.balance+=amount
+#             print("amount deposit successfully")
+#             print(f"updated balance is {self.balance}")    
+#         else:
+#             print("amount must be positive")  
+              
+#     def withdraw(self,amount):
+#         amount=int(amount)
+#         if amount>self.balance:
+#             print("insufficient balance")
+#         elif amount<0:
+#             print("amount must be positive")
+#         else :
+#             self.balance-=amount
+#             print("withdraw successfully")
+#             print(f"updated balance is {self.balance} ")
+            
+#     def update(self) :
+#         print(f"current balance is {self.balance}")          
+        
+# acc1=BankAccount(23,10000)
+# acc1.deposit(5000)  
+# acc1.withdraw(2000)              
+
+
+
+# class Rectangle:
+#     def __init__(self,length,width):
+#         self.length=int(length)
+#         self.width=int(width)
+#     def area(self):
+#         area=self.length*self.width
+#         print("area of rectangle is ",area)
+#     def perimeter(self):
+#         perimeter=2*(self.length+self.width)
+#         print("perimeter of rectangle is ",perimeter)
+# r1=Rectangle(12,14)   
+# r1.area()
+# r1.perimeter()
+
+
+# class Person:
+#     def __init__(self,name="unknown",age=0):
+#         self.name=name
+#         self.age=int(age)
+#     def show(self):
+#         if self.age>=18:
+#             print(f"{self.name} is an adult")
+#         else:
+#             print(f"{self.name} is not an adult")        
+# p1=Person("Ram",12)
+# p2=Person("sham",18)
+# p3=Person("rahul",25)  
+# p4=Person()          
+# p4.show()
+# p1.show()
+# p2.show()
+# p3.show()
+
+
+
+# class Dog:
+#     def __init__(self,name,breed):
+#         self.name=name
+#         self.breed=breed
+#     def bark(self):
+#         print(f"{self.name} is of {self.breed} breed has Woof!")  
+# d1=Dog("dugu","pitbul")
+# d2=Dog("kaalu","lebra")
+# d1.bark()
+# d2.bark()        
+        
+        
+        
+# class Animal:
+#     def sound(self):
+#         print("Animal makes a sound")
+# class Cat(Animal):
+#     def sound(self):
+#         print("Meaww...")
+# class Dog(Animal):
+#     def sound(self):
+#         print("Woof!..")                
+# c1=Cat()
+# d1=Dog()
+
+# c1.sound()
+# d1.sound()        
+                
+        
+
+# class Laptop:
+#     def __init__(self,brand,price):
+#         self.brand=brand
+#         self.price=int(price)
+#     def apply_discount(self,discount):
+#        self.price-=self.price*discount/100
+#        print("20% discount is given")
+#        print(f"updated price is {self.price}")
+# l1=Laptop("hp",60000)
+# l1.apply_discount(20)   
+
+     
+                
+class Book:
+    def __init__(self,name,price):
+        self.name=name
+        self.price=int(price)
+    def show(self):
+        print(f"name of book is {self.name} and its price is {self.price}")
+books=[
+    Book("Physics",800),
+    Book("Chemistry",700),
+    Book("Math",1000)
+]                           
+
+for a in books:
+    a.show()
