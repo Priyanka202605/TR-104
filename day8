@@ -1,0 +1,37 @@
+#oops
+#classes
+# class Car:
+#     # color="black"
+#     # model="bmw"
+#     def __init__(self,color,model):
+#         self.color = color
+#         self.model = model
+#         self.tyre=4
+#     def create(self):
+#         return f"car color is {self.color},car model is {self.model} and have tyres {self.tyre}"
+        
+# obj=Car("black","bmw")  
+# obj2=Car("red","lembergini")
+# # print(Car().model)
+# print(obj.create())
+# print(obj2.create())
+# # print(Car())    
+
+
+class Car:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+        print("constructor of class car")
+    def add(self) :  #methods
+        return self.a+self.b
+    @staticmethod   
+    def hello():
+        print("this is static method")
+    @classmethod    
+    def clg(cls):
+        print("hlo python")    
+obj=Car(5,7)    
+print(obj.add())
+print(obj.hello())
+print(obj.clg())
