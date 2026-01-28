@@ -1,0 +1,28 @@
+#error handling
+#try except
+# try:
+#     print(10/2)
+# except ZeroDivisionError:
+#     print("error while diving") 
+# except:
+#     print("wrong data type")    
+# else:
+#     print("division is possible") 
+# finally:
+#     print("end of program")    
+
+
+
+# #raise error
+# age=10
+# if age<=0: 
+#   raise ValueError("age can't be negative ")   
+
+
+#file handling
+a=open("day8.py","w")
+for i in range(5):
+  a.write("hello priyanka is here")
+  a.write(" hello python")
+# print(a.read())
+a.close()
