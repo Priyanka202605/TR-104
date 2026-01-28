@@ -1,0 +1,85 @@
+#encapsulasion
+
+
+# class car:
+#     def __init__(self,color, model):
+#         self._color= color #protected
+#         self.__model= model #private
+#     def __show(self):
+#         return self.color, self.__model
+#     def get(self):
+#         return self.__show()
+
+# obj1= car("red", "abc")
+# # print(obj1._color)
+# print(obj1.__model)
+# print(obj1.get())
+
+
+#abstraction
+
+# from abc import ABC , abstractmethod
+# class angle(ABC):
+#  def __init__(self):
+#     super().__init__()
+#  @abstractmethod
+#  def get(self):
+#     pass
+
+
+
+
+
+# class sqare(angle):
+#     def __init__(self,a):
+#         self.a= a
+#     def show(self):
+#         return self.a**2
+#     def get(self):
+#        pass
+
+# obj1= sqare(3)
+# print(obj1.show())
+
+
+# import test
+
+# a= test.add(23,45)
+# print(a)
+
+# b= test.mul(3,4)
+# print(b)
+
+
+
+# from pack import add, mul
+# a= add.add(12,34)
+# print(a)
+
+# b= mul.mul(2,3)
+# print(b)
+
+
+
+
+
+#builin functions
+# a=[12,34,46,57,34]
+# b= lambda x:x**2
+#map
+# c=map(b,a)
+# print(list(c))
+
+
+
+#filter
+# d= lambda x: True if x%2==0 else False
+# c= filter(d, a)
+# print(list(c))
+
+
+#list comprihension
+
+
+a={i:i**2 for i in range(10)}
+print(a)
