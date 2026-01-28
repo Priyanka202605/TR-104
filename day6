@@ -1,0 +1,256 @@
+#avg function
+# def avg():
+#     a=int(input("Enter any no. "))
+#     b=int(input("Enter any no. "))
+#     print((a+b)/2)
+# avg()    
+
+
+#percentage function
+# def percentage():
+#     a=int(input("Enter any no. "))
+#     b=int(input("Enter any no. "))
+#     if b==0:
+#         print("divisor can't be zero")
+#     else:
+#         print((a/b)*100)
+# percentage()            
+
+
+
+#print function
+# def show():
+#     a=input("Enter you want to print ")
+
+#     print(a)
+#     print(type(a))
+    
+# show()  
+
+
+# def show():
+#     print("Hello,World!")
+# show()      
+   
+    
+
+
+
+#add two no.'s function
+# def add():
+#     a=int(input("Enter any no. "))
+#     b=int(input("Enter any no. "))
+#     print(a+b)
+# add() 
+
+
+# def add(a,b):
+#     return a+b
+# # r1=add(12,14)
+# print(add(5,7))
+
+
+
+
+
+#check no. even or odd function
+# def even_odd_no():
+#     n=int(input("Enter any no. "))
+#     if n % 2 == 0:
+#         print("n is even no. ")
+#     else:
+#         print("n is odd no. ")    
+# even_odd_no()        
+    
+    
+# def even_odd_no(n):
+#     if n%2==0:
+#         return "n is even"
+#     else:
+#         return "n is odd"
+# print(even_odd_no(12))     
+    
+
+
+
+#factorial function
+# def fact(n):
+    
+#     if n==0:
+#         return 1
+#     else:
+#         return n*fact(n-1)
+# n=int(input("Enter any no. "))    
+# print(fact(n))  
+
+
+# def fact(n):
+#     if n==0:
+#         return 1
+#     else:
+#         return n*fact(n-1)
+# print(fact(6))
+
+
+
+
+
+# find largest number of three numbers
+# def largest_number():
+#     A=int(input("Enter value of A "))
+#     B=int(input("Enter value of B "))
+#     C=int(input("Enter value of C "))
+#     if A>=B and A>=C:
+#         print("A is largest number ")
+#     elif B>=A and B>=C:
+#         print("B is largest number")
+#     else:
+#         print("C is largest number")
+# largest_number()           
+
+
+# def largest_number(a,b,c):
+#     if a>=b and b>=c:
+#         return "a is largest number"
+#     elif b>=a and b>=c:
+#         return "b is largest number"
+#     else:
+#         return"c is largest number"
+# print(largest_number(15,25,4))    
+              
+    
+                 
+        
+ 
+# # finding square      
+# def square():
+#     n=int(input("Enter any number "))
+#     print(n*n)
+# square() 
+
+
+# def square(n):
+#     return n*n
+# print(square(8))
+
+ 
+
+
+# #calculate sum of all number in list
+# def sum_of_list(numbers):
+#     sum=0
+#     for n in numbers:
+#         sum+=n
+#     return sum
+# print(sum_of_list([12,5,48,25,4,23,7,6]))     
+    
+
+
+
+#reverse given string
+# def reverse():
+#     a=input("Enter anything ")
+#     print(a)
+#     print(a[::-1])
+# reverse()
+
+
+# def reverse(a):
+#     return a[::-1]
+# print(reverse("hello priyanka is here"))
+
+
+
+
+#check number is prime or not
+# def prime_number():
+#     n=int(input("Enter any number "))
+#     if n<=1:
+#         print("not prime number")
+#     else:
+#         for i in range(2,n):
+#             if n%i==0:
+#                 print("not prime number")
+#                 break
+#         else :
+#             print("prime number")
+# prime_number()            
+
+
+# def prime_number(n):
+#     if n<=1:
+#         return "not prime number" 
+#     else:
+#         for i in range(2,n):
+#             if n%i==0:
+#                 return "not prime number"
+#                 break
+#         else:
+#             return "prime number"
+# print(prime_number(11))           
+    
+
+
+
+
+# #check vowels
+# def check():
+#   n=input("Enter anything ")
+#   print(n)
+#   for ch in n:
+#       if ch in "aeiouAEIOU":
+#           print("vowels")
+#           break
+#   else:
+#           print("not vowels")
+# check()              
+
+
+#count vowels
+# def check():
+#     n=input("Enter anything ")
+#     print(n)
+#     count=0
+#     for ch in n:
+#         if ch in "aeiouAEIOU":
+#             count+=1
+#     print(count)            
+# check()
+                
+
+
+# def check():
+#     n=input("Enter anything you want to print ")
+#     print(n)                                              #error
+#     print(n.index("start:","end:"))
+# check()    
+
+
+
+#find avrage of numbers in list
+# def avg():
+#     a=[23,22,2,5,18,19,45]
+#     print(a)
+#     print((a[0]+a[1]+a[2]+a[3]+a[4]+a[5]+a[6])/6)
+# avg()    
+
+
+
+# def multiplication_table():
+#     n=int(input("Enter any number "))
+#     print(n)
+#     for i in range(10):                         #error
+#         print(n+1==n+n)
+# multiplication_table()  
+
+
+
+# def list():
+#     n=[2,5,26,34,21,8,5,7,4]
+#     print(n)
+#     print(n.count("divisible of 2" ))                  #error
+# list()
+    
+    
+    
+    
