@@ -1,0 +1,110 @@
+-- create table student(
+-- id int,
+-- name char(10),
+-- email varchar(10)
+-- );
+
+
+
+-- insert into student values(1,'kamal', 'k@123');
+
+
+-- select * from student;
+
+
+-- numeric(8,2)
+-- INT
+-- SMALLINT
+-- BIGINT
+-- REAL
+-- DOUBLE PRESISION
+
+
+
+create table num(
+id INT, -
+age SMALLINT, -- -32k +32
+price BIGINT,
+Discount REAL,
+acc DOUBLE PRECISION,
+marks NUMERIC(3,1)
+);
+
+
+
+insert into num 
+values(1,34,12766896060,12,5.876068657584584874874, 98);
+
+
+select * from num;
+
+
+
+create table char(
+id INT,
+name char(10), -- 'kamal    '
+email varchar(10) -- 'kamal'
+)
+
+
+
+insert into char values(
+1, 'kamal', 'k@1334'
+);
+
+
+
+select * from char;
+
+create table Date1(
+id Int,
+e_date Date,
+start Time,
+created_at Timestamp,
+timezone Timestamptz,
+duration interval
+);
+
+
+insert into Date1 values(1,'2026-02-17','10:30','2026-02-17 10:30:00','2026-02-17 10:30:00+5:30','5 days');
+
+select * from Date1;
+
+
+
+
+--PRIMARY KEY --- unique ,not null
+-- NOT NULL --- 
+-- UNIQUE --- 
+-- DEFAULT --
+-- CHECK---
+
+
+create table emp(
+id INT PRIMARY KEY,
+name char(10) NOT NULL,
+phone numeric(10) UNIQUE,
+salary INT DEFAULT 100000,
+age INT CHECK(age>18)
+);
+
+
+insert into emp(id,name,phone,salary,age) values(3,'raman','95788542',20000,24);
+
+select * from emp2;
+
+
+
+
+create table emp2(
+id SERIAL PRIMARY KEY,
+name char(10) NOT NULL,
+phone numeric(10) UNIQUE,
+salary INT DEFAULT 100000,
+age INT CHECK(age>18)
+);
+
+
+
+
+insert into emp2(id,name,phone,salary,age) values('raman','8989542',20000,24);
