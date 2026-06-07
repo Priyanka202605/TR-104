@@ -1,0 +1,26 @@
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import SimpleRNN, Dense
+
+# Assume embeddings generated earlier are stored in X_embeddings
+# Shape example: (samples, timesteps, embedding_dim)
+
+model = Sequential([
+    SimpleRNN(32, activation='relu',
+              input_shape=(X_embeddings.shape[1],
+                           X_embeddings.shape[2])),
+
+    Dense(1, activation='sigmoid')
+])
+
+model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['accuracy']
+)
+
+model.fit(
+    X_embeddings,
+    y,
+    epochs=10,
+    batch_size=32
+)
