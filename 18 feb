@@ -1,0 +1,53 @@
+CREATE TABLE products (
+    product_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    sku_code CHAR(8) UNIQUE NOT NULL,
+    price NUMERIC(10,2) CHECK (price > 0),
+    stock_quantity INT DEFAULT 0 CHECK (stock_quantity >= 0),
+    is_available BOOLEAN DEFAULT TRUE,
+    category TEXT NOT NULL,
+    added_on DATE DEFAULT CURRENT_DATE,
+    last_updated TIMESTAMP DEFAULT NOW()
+);
+INSERT INTO products (name, sku_code, price, stock_quantity, category)
+VALUES
+('Bluetooth Speaker', 'SPK44556', 2499.00, 35, 'Electronics'),
+('Running Shoes', 'SHO77889', 1999.99, 60, 'Footwear'),
+('Water Bottle', 'BOT22334', 299.50, 150, 'Fitness'),
+('Office Chair', 'CHR55667', 5499.00, 20, 'Furniture'),
+('Notebook Pack', 'NOT88990', 199.00, 300, 'Stationery'),
+('Smart Watch', 'SWT11224', 6999.99, 25, 'Electronics'),
+('Backpack', 'BAG33445', 1299.00, 80, 'Accessories'),
+('Table Fan', 'FAN66778', 1899.50, 40, 'Home Appliances'),
+('Protein Powder', 'PRO99001', 3499.00, 30, 'Fitness'),
+('LED Monitor', 'MON22335', 12499.99, 15, 'Electronics');
+
+
+select * from products;
+
+
+
+
+select * from products
+where price<=1000;
+
+select * from products
+where category = 'Electronics' or category = 'Fitness';
+
+
+select * from products
+where not category = 'Electronics';
+
+
+
+select * from products
+where price between 199 and 2000;
+
+
+
+
+select * from products
+where category in ('Electronics','Fitness');
+
+select * from products
+where sku_code Like '%44%';
