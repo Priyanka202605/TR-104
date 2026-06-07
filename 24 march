@@ -1,0 +1,143 @@
+train Decision tree ,logistic regression, random forest
+
+with gridsearch and Random search
+
+# Import Libraries
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+
+# Load Dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split Dataset
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# ==========================================
+# 1. DECISION TREE - GRID SEARCH
+# ==========================================
+dt = DecisionTreeClassifier()
+
+dt_grid = {
+    'criterion': ['gini', 'entropy'],
+    'max_depth': [2, 4, 6, 8, 10],
+    'min_samples_split': [2, 5, 10]
+}
+
+dt_grid_search = GridSearchCV(
+    dt,
+    dt_grid,
+    cv=5,
+    scoring='accuracy'
+)
+
+dt_grid_search.fit(X_train, y_train)
+
+print("Decision Tree Grid Search")
+print("Best Parameters:", dt_grid_search.best_params_)
+print("Best Accuracy:", dt_grid_search.best_score_)
+
+# ==========================================
+# 2. DECISION TREE - RANDOM SEARCH
+# ==========================================
+dt_random = RandomizedSearchCV(
+    dt,
+    param_distributions=dt_grid,
+    n_iter=10,
+    cv=5,
+    random_state=42
+)
+
+dt_random.fit(X_train, y_train)
+
+print("\nDecision Tree Random Search")
+print("Best Parameters:", dt_random.best_params_)
+print("Best Accuracy:", dt_random.best_score_)
+
+# ==========================================
+# 3. LOGISTIC REGRESSION - GRID SEARCH
+# ==========================================
+lr = LogisticRegression(max_iter=1000)
+
+lr_grid = {
+    'C': [0.01, 0.1, 1, 10, 100],
+    'solver': ['lbfgs', 'liblinear']
+}
+
+lr_grid_search = GridSearchCV(
+    lr,
+    lr_grid,
+    cv=5,
+    scoring='accuracy'
+)
+
+lr_grid_search.fit(X_train, y_train)
+
+print("\nLogistic Regression Grid Search")
+print("Best Parameters:", lr_grid_search.best_params_)
+print("Best Accuracy:", lr_grid_search.best_score_)
+
+# ==========================================
+# 4. LOGISTIC REGRESSION - RANDOM SEARCH
+# ==========================================
+lr_random = RandomizedSearchCV(
+    lr,
+    param_distributions=lr_grid,
+    n_iter=5,
+    cv=5,
+    random_state=42
+)
+
+lr_random.fit(X_train, y_train)
+
+print("\nLogistic Regression Random Search")
+print("Best Parameters:", lr_random.best_params_)
+print("Best Accuracy:", lr_random.best_score_)
+
+# ==========================================
+# 5. RANDOM FOREST - GRID SEARCH
+# ==========================================
+rf = RandomForestClassifier()
+
+rf_grid = {
+    'n_estimators': [50, 100, 150],
+    'max_depth': [2, 4, 6, 8],
+    'min_samples_split': [2, 5, 10]
+}
+
+rf_grid_search = GridSearchCV(
+    rf,
+    rf_grid,
+    cv=5,
+    scoring='accuracy'
+)
+
+rf_grid_search.fit(X_train, y_train)
+
+print("\nRandom Forest Grid Search")
+print("Best Parameters:", rf_grid_search.best_params_)
+print("Best Accuracy:", rf_grid_search.best_score_)
+
+# ==========================================
+# 6. RANDOM FOREST - RANDOM SEARCH
+# ==========================================
+rf_random = RandomizedSearchCV(
+    rf,
+    param_distributions=rf_grid,
+    n_iter=10,
+    cv=5,
+    random_state=42
+)
+
+rf_random.fit(X_train, y_train)
+
+print("\nRandom Forest Random Search")
+print("Best Parameters:", rf_random.best_params_)
+print("Best Accuracy:", rf_random.best_score_)
