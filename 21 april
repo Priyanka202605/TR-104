@@ -1,0 +1,49 @@
+import streamlit as st
+import numpy as np
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import load_model
+import joblib
+
+
+
+
+@st.cache_resource
+def load_models():
+    tkn= joblib.load("tokenizer.pkl")
+    model = load_model("Lstm_model2.h5")
+    st.success("LSTM model is load successfully")
+    return tkn, model
+
+
+
+
+
+tkn, model= load_models()
+
+def predict_next_word(text):
+
+    seq = tkn.texts_to_sequences([text])
+    seq = pad_sequences(seq, maxlen=748, padding='pre')
+
+    pred = model.predict(seq, verbose=0)
+
+    pred_index = np.argmax(pred)
+
+    return tkn.index_word[pred_index]
+
+
+# text = "Anyone who thinks sitting"
+
+text= st.text_input("write anything")
+
+
+if st.button("predict next 5 words"):
+    for i in range(5):
+        next_word = predict_next_word(text)
+        text+=" "+next_word
+        # print("Next word:", next_word)
+    st.success(text)
+
+
+
+st.image("https://img.freepik.com/free-photo/lavender-field-sunset-near-valensole_268835-3910.jpg?semt=ais_hybrid&w=740&q=80", caption="landscape image")
