@@ -1,0 +1,86 @@
+start frontened
+
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# all texts headings and paras
+st.title("My First app")
+
+st.header("this is my heading")
+
+
+st.subheader("this is my sub heading")
+
+
+st.write("""Write arguments to the app.
+
+This is the Swiss Army knife of Streamlit commands: it does different things depending on what you throw at it. Unlike other Streamlit commands, write() has some unique properties:
+
+You can pass in multiple arguments, all of which will be written.
+Its behavior depends on the input types as follows.
+It returns None, so its "slot" in the App cannot be reused.""")
+
+st.text("The string to display. text")
+
+
+st.markdown("<h1>hello</h1>", unsafe_allow_html=True)
+
+
+st.markdown("### Markdown \n **Bold**")
+
+
+
+
+# inputs
+
+name = st.text_input("enter your name")
+bio= st.text_area("enter bio")
+age= st.number_input("enter your age", min_value=1, max_value=100)
+
+
+if st.button("Submit"):
+    st.write(name)
+    st.write(bio)
+    st.write(age)
+
+
+
+
+st.slider("select any number",0, 50, 14 )
+
+a=["JAVA", "Python", "C++", "C#"]
+st.selectbox("choose language",a)
+
+st.checkbox("i agree")
+
+st.radio("select any one", a)
+
+
+st.file_uploader("upload a file")
+
+df= pd.read_csv("carprices.csv")
+
+data= df.head()
+
+st.dataframe(df)
+
+st.table(data)
+st.write(data)
+
+
+milage= df['Mileage']
+age= df['Age(yrs)']
+
+
+st.write(milage)
+
+st.line_chart(milage)
+
+plt.plot(milage, age)
+# plt.show()
+st.pyplot(plt)
+
+st.bar_chart(milage)
+
+st.area_chart(milage)
