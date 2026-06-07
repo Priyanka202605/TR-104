@@ -1,0 +1,182 @@
+-- select * from products;
+
+-- clauses
+-- -- select
+-- select name, category from products;
+
+
+-- -- from
+-- -- where
+
+-- select * from products where category= 'Electronics'
+-- -- group by
+
+-- select category from products group by category;
+
+-- -- having
+
+
+-- select category, count(*) from products group by category having count(*)>1
+-- -- Limit
+-- select * from products limit 5;
+
+-- -- As
+
+-- select name as item_name , price as item_price from products;
+
+-- -- distinct
+
+
+-- select distinct category from products;
+
+-- -- order by;
+-- select * from products order by price Desc;
+
+
+
+
+-- aggrigation func
+-- count()
+-- select count(category) from products where category= 'Electronics';
+
+
+-- min()
+
+-- select min(price) from products;
+-- -- max()
+
+
+-- --avg()
+
+-- select round(avg(price),2) from products;
+-- -- sum()
+-- select sum(price) from products;
+
+
+
+-- strings funcs
+
+-- upper
+
+select upper('hello');
+
+-- lower
+select lower('HElLO');
+
+-- length
+select length('hello');
+
+
+
+
+-- substr
+
+select substr('hello sql', 6,4)
+
+
+-- right
+select right('hello sql',4 )
+
+-- left
+select left('hello sql', 5);
+
+
+
+-- concat
+
+select concat('hello',' ', 'sql');
+
+
+
+select concat_ws( 'language', 'sql')
+
+
+-- replace
+
+
+select replace('hello sql', 'sql','python');
+
+
+
+select replace(sku_code, left(sku_code,2), 'GG') from products;
+
+
+
+select * from products;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+create table students(
+id serial primary key,
+name char(100),
+age bigint
+);
+
+insert into students(name, age) values('kamal', 16),('raman', 20);
+
+
+
+select * from students
+
+
+alter table students
+add column email char(100);
+
+
+alter table students
+add column email2 char(100) default 'not given';
+
+
+
+alter table students
+drop column email;
+
+
+alter table students
+rename column email2 to email;
+
+
+alter table students
+alter column age type int;
+
+alter table students
+add constraint age_check check (age>0)
+
+
+alter table students
+rename to data;
+
+
+
+-- case
+
+select * from products;
+
+
+select name , price, case
+	when price <1000 then 'Low'
+	when price >1000 and price <2000 then 'medium'
+	else 'high'
+	end as price_tag from products;
+
+
+  also done operator
+  -- operators
+-- =
+-- >=
+-- <=
+-- and or not
+-- between
+-- in
+--like
