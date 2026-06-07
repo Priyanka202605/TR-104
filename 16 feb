@@ -1,0 +1,74 @@
+start sql table creation
+
+
+create table student(
+id INT,
+name char(10),
+age INT
+);
+
+
+insert into student 
+values(1, 'raman', 24),
+(2, 'kamal', 13);
+
+
+select * from student;
+
+
+select name,age from student where id=1;
+
+
+update student set age= 45 where id=1;
+
+
+
+-- Numeric data types
+create table num(
+id SMALLINT,  -- -32k +32k
+age INT, -- -2b +2b
+biG BIGINT,  -- 8BYTES -9 *10^ 18 -- 9 *10^18
+dec REAL, 
+duble DOUBLE PRECISION, 
+Price NUMERIC(8, 2)
+
+);
+
+
+
+
+INSERT INTO num 
+values(2, 24, 140000000, 34.6, 3.897987097097, 123456.78),
+		(3, 46, 130000000, 56, 7, 89);
+select * from num
+
+
+
+
+--- char --- varchar
+
+create table char1(
+id INT,
+name char(10), --- 'kamal     '
+email varchar(30), --- 'kamla'
+bio text --
+);
+
+insert into char1 values(1, 'aman', 'aman@123', 'hi aman this side');
+
+select * from char1;
+
+-- True False NUll
+
+create table bool(
+id INT,
+active bool
+);
+
+
+insert into bool values(1, True),
+(2,False), (3, Null);
+
+
+
+select * from bool;
